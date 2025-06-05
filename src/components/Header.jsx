@@ -18,7 +18,7 @@ function Header() {
     <>
       <header className="header">
         <div className="logo-area">
-          <img src="/estrela-na-pagina-do-calendario-diario.png" alt="Events Hub" className="logo-icon" />
+          <img src="/logo.png" alt="Events Hub" className="logo-icon" />
           <span className="logo-text">Events Hub</span>
         </div>
         <div className="search-area">
@@ -32,9 +32,12 @@ function Header() {
             <Link href="/cadastro" className="account-button">Cadastrar-se</Link>
           </div>
         }
-        <div className="account-buttons">
-          <button className="menu-icon" onClick={alternarMenu}>☰</button>
-        </div>
+        {!session ?
+          <> </> :
+          <div className="account-buttons">
+            <button className="menu-icon" onClick={alternarMenu}>☰</button>
+          </div>
+        }
       </header>
 
       {session ? <MenuLateral session={session} isOpen={menuAberto} /> : <> </>}
