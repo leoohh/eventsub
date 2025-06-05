@@ -1,0 +1,26 @@
+.home-container {
+    padding: 20px;
+  }
+  
+  .banner {
+    background-color: #eee;
+    height: 200px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #7b1fa2;
+  }
+  
+  .card-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  

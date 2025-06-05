@@ -1,0 +1,99 @@
+.header {
+  position: fixed; /* Fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ajusta para a largura exata da tela */
+  height: 80px;
+  background-color: #9900cc; /* Fundo roxo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+  font-family: sans-serif;
+  z-index: 9999;
+  border-bottom-left-radius: 10px; /* Aplica o border-radius apenas nos cantos inferiores */
+  border-bottom-right-radius: 10px;
+  box-sizing: border-box; /* Inclui o padding dentro da largura total */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para suavizar o efeito */
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #9900cc;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.account-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sell-button {
+  background: white;
+  color: #9900cc;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
