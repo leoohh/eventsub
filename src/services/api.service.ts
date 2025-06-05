@@ -43,8 +43,9 @@ export const api = async ({ url = "", method = "POST", headers = {}, data, param
 
     clearTimeout(timeoutId);
 
-    console.log(response);
-    return await response.json();
+    const resp = await response.json();
+
+    return { status: response.status, ...resp};
   } catch (error: any) {
     clearTimeout(timeoutId);
 

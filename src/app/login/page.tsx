@@ -34,7 +34,6 @@ export default function LoginPage() {
 
       window.location.reload();
     } catch (err) {
-      console.log(err)
       showToast({ type: "error", message: "Erro ao fazer login." });
     }
   }
@@ -67,7 +66,7 @@ export default function LoginPage() {
           </div>
           <button type="submit" className="auth-button">Entrar</button>
         </form>
-        <p className="auth-switch">Não tem conta? <a href="/Cadastro">Crie uma</a></p>
+        <p className="auth-switch">Não tem conta? <a href="/cadastro">Crie uma</a></p>
       </div>
     </div>
   );

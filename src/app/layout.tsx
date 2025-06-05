@@ -5,6 +5,8 @@ import { ToastContainer } from "react-toastify";
 
 import toastConfig from "@config/toast.config";
 
+import Header from "@components/Header";;
+
 import { AuthProvider } from "@context/AuthContext";
 
 import { getServerSession } from "@services/auth.service";
@@ -20,6 +22,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <body>
         <AuthProvider initialSession={session}>
+          <Header />
           <ToastContainer {...toastConfig} />
           {children}
         </AuthProvider>

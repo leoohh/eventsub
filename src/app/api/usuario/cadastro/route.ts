@@ -12,12 +12,12 @@ import { api } from "@services/api.service";
 import { encode } from "@services/auth.service";
 
 export async function POST(request: NextRequest) {
-  const { nome,email, senha } = await request.json();
+  const { nome, email, senha } = await request.json();
 
   try {
     const resposta = await api({
       url: `/usuarios/cadastro`,
-      data: { nome,email, senha },
+      data: { nome, email, senha },
     });
 
     if (resposta.accessToken) {

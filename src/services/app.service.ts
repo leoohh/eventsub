@@ -36,11 +36,13 @@ export const app = async ({ url = "", method = "POST", headers = {}, data, param
 
   const responseData = await response.json();
 
-  if (response.ok) {
+  if (response.status < 400) {
     return { data: responseData };
   }
 
   const { title, message, status } = responseData;
+
+  console.log({title, message, status});
 
   if (status === 422) {
     responseData.invalid_params.forEach((param: { name: string; reason: string }) => {

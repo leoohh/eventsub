@@ -44,8 +44,6 @@ export async function decode(token?: string) {
 
     return payload as Session;
   } catch (error) {
-    console.log(error);
-
     return undefined;
   }
 }

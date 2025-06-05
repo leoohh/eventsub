@@ -36,10 +36,10 @@ export default function CadastroPage() {
       });
 
       showToast({ type: "success", message: "Cadastro realizado com sucesso!" });
-      router.push("/login");
+
+      router.push("/login")
     } catch (err) {
       console.error(err);
-      showToast({ type: "error", message: "Erro ao cadastrar. Verifique os dados." });
     }
   };
 
