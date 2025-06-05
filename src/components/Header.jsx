@@ -15,12 +15,12 @@ function Header() {
   };
 
   return (
-    <>
-      <header className="header">
-        <div className="logo-area">
+    <div style={{ marginBottom: 75 }}>
+      <header className="header" >
+        <Link href="/" className="logo-area">
           <img src="/logo.png" alt="Events Hub" className="logo-icon" />
           <span className="logo-text">Events Hub</span>
-        </div>
+        </Link>
         <div className="search-area">
           <input type="text" placeholder="Pesquisar..." className="search-input" />
           <button className="search-button">🔍</button>
@@ -41,7 +41,7 @@ function Header() {
       </header>
 
       {session ? <MenuLateral session={session} isOpen={menuAberto} /> : <> </>}
-    </>
+    </div>
   );
 }
 

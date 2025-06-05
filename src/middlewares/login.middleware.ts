@@ -11,5 +11,5 @@ export async function loginMiddleware(request: NextRequest) {
 
   if (!session) return;
 
-  return NextResponse.redirect(new URL("/profile", request.url));
+  return NextResponse.redirect(new URL("/", request.url));
 }
