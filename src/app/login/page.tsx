@@ -32,7 +32,7 @@ export default function LoginPage() {
     try {
       await app({ url: "api/auth/login", data: { email, senha } })
 
-      window.location.reload();
+      window.location.href = '/';
     } catch (err) {
       showToast({ type: "error", message: "Erro ao fazer login." });
     }
