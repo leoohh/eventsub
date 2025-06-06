@@ -4,6 +4,12 @@ import ProductSection from '../components/ProductSection';
 import Footer from '../components/Footer';
 import { app } from '@services/app.service';
 
+const images = [
+  'Sem título.jpeg',
+  'Sem título2.jpeg',
+  '/Sem título3.jpeg'
+];
+
 export default async function CategoriasPage() {
   const res = await app({ url: "api/categoria/listar-categorias-e-produtos", method: "GET" });
 
@@ -21,7 +27,7 @@ export default async function CategoriasPage() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      <Carousel />
+      <Carousel images={images} />
       {categorias.map((categoria: any) => (
         <ProductSection
           key={categoria.id_categoria}

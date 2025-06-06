@@ -3,13 +3,8 @@
 import React from 'react';
 import '../styles/Carousel.css';
 
-const images = [
-  'Sem título.jpeg',
-  'Sem título2.jpeg',
-  '/Sem título3.jpeg'
-];
 
-function Carousel() {
+function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const nextSlide = () => {
