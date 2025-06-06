@@ -4,9 +4,9 @@ import React from 'react';
 import '../styles/Carousel.css';
 
 const images = [
-  '/images/carousel1.jpg',
-  '/images/carousel2.jpg',
-  '/images/carousel3.jpg'
+  'Sem título.jpeg',
+  'Sem título2.jpeg',
+  '/Sem título3.jpeg'
 ];
 
 function Carousel() {
