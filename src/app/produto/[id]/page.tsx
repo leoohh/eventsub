@@ -21,7 +21,7 @@ type Props = {
   params: { id: string };
 };
 
-export default async function ProdutoDetalhesServer({ params }: Props) {
+export default async function ProdutoDetalhesServer({ params }: any) {
   const res = await app({
     url: `/api/produto/buscar-id`,
     method: "GET",
