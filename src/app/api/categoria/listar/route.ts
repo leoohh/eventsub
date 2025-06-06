@@ -5,18 +5,15 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { api } from "@services/api.service";
 
-export async function POST(request: NextRequest) {
-  const { nome, descricao, preco, imagens, categorias } = await request.json();
-
+export async function GET(request: NextRequest) {
   try {
     const resposta = await api({
-      url: `/produtos/cadastro`,
-      data: { nome, descricao, preco, imagens, categorias }
+      url: `/categorias`,
+      method: "GET"
     });
 
     return NextResponse.json(resposta, { status: resposta.status });
   } catch (error) {
-    console.log(error)
     return NextResponse.json({}, { status: 401 });
   }
 }

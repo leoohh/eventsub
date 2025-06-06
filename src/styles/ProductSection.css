@@ -20,37 +20,54 @@
   scroll-behavior: smooth;
   width: 100%;
   gap: 20px; /* Espaço entre os cards */
+  padding: 10px 0;
 }
 
+/* CARD CONFIGURADO COM TAMANHO FIXO E CONTEÚDO UNIFORME */
 .product-card {
-  min-width: 250px;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
   padding: 15px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card:hover {
   transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
+/* IMAGEM COM TAMANHO CONTROLADO E CROP INTELIGENTE */
 .product-card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
+/* NOME DO PRODUTO COM ALTURA FIXA PARA EVITAR CRESCIMENTO DO CARD */
 .product-card h4 {
-  margin: 10px 0;
+  margin: 10px 0 5px;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* ESTRELAS */
 .product-card p {
-  color: #f39c12; /* Cor dourada para as estrelas */
+  color: #f39c12;
   font-size: 18px;
 }
 
+/* BOTÕES DE NAVEGAÇÃO */
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -73,4 +90,13 @@
 
 .arrow-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* OPÇÃO EXTRA: ESCONDE A BARRA DE SCROLL */
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+.product-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

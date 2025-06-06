@@ -8,7 +8,7 @@ import { api } from "@services/api.service";
 export async function GET(request: NextRequest) {
   try {
     const resposta = await api({
-      url: `/categorias`,
+      url: `/categorias/produtos`,
       method: "GET"
     });
 
