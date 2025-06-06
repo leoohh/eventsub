@@ -5,12 +5,7 @@ import React, { createContext, useContext, useState } from "react";
 
 import { app } from "@services/app.service";
 
-export type Session = {
-  id: string;
-  nome: string;
-  accessToken: string;
-  tokenVersion: string;
-};
+export type Session = any
 
 type AuthContextType = {
   session: Session | undefined;
